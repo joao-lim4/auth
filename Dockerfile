@@ -10,12 +10,12 @@ RUN mv composer.phar /usr/bin/composer
 RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libzip-dev \
-    php7.4-zip \
+    # php7.4-zip \
     zip \
     unzip
 
 RUN composer install
-RUN cp ./env.exemple ./.env
+RUN cp ./.env.example ./.env
 
 EXPOSE 5000
 
