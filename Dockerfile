@@ -19,6 +19,6 @@ RUN cp ./.env.example ./.env
 
 RUN php artisan migrate
 
-EXPOSE 3000
+EXPOSE 8000
 
-CMD php -S 0.0.0.0:3000 -t public
+CMD php -S 0.0.0.0:8000 -t public
