@@ -6,6 +6,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN chmod +x composer.phar
 RUN mv composer.phar /usr/bin/composer
+RUN yum install zip unzip php7.4-zip
 
 RUN composer install
 RUN cp ./env.exemple ./.env
