@@ -2,7 +2,10 @@ FROM php:7.4-cli
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
-COPY --from=composer /usr/bin/composer /usr/bin/composer
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php
+RUN chmod +x composer.phar
+RUN mv composer.phar /usr/bin/composer
 
 RUN composer install
 RUN cp ./env.exemple ./.env
