@@ -17,6 +17,8 @@ RUN apt-get update && apt-get install -y \
 RUN composer install
 RUN cp ./.env.example ./.env
 
-EXPOSE 5000
+RUN php artisan migrate
+
+EXPOSE 3000
 
 CMD php -S 0.0.0.0:3000 -t public
