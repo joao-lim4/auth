@@ -8,11 +8,12 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
 
-  api:
-    build: "./Api"
-    container_name: api
-    restart: always
-    ports:
-      - "8000:8000"
-    depends_on:
-      - db
+  # api:
+  #   build: "./Api"
+  #   container_name: api
+  #   restart: always
+  #   ports:
+  #     - "8000:8000"
+  #   depends_on:
+  #     - db
+    
