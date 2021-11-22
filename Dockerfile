@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
 RUN composer install
 RUN cp ./.env.example ./.env
 
-# RUN php artisan migrate
+RUN php artisan migrate
 # RUN php artisan db:seed --class=NivelSeeder
 
 EXPOSE 8000
