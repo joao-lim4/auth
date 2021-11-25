@@ -3,7 +3,8 @@ COPY . /usr/src/auth
 WORKDIR /usr/src/auth
 
 RUN apt-get upgrade
-RUN apt-get update
+RUN apt-get update -y
+RUN apt-get install -y apt-utils
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 RUN php composer-setup.php
 RUN chmod +x composer.phar
