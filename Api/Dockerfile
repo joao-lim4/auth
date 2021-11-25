@@ -12,8 +12,6 @@ RUN mv composer.phar /usr/bin/composer
 RUN apt-get update && apt-get install -y \
     zlib1g-dev \
     libzip-dev \
-    # php7.4-zip \
-    pdo-mysql \
     zip \
     unzip
 
